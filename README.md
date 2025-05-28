@@ -37,7 +37,7 @@ Arrays used for RMS calculation:
 
 A PDF document is included in the repository that contains all the mathematical formulas for the implemented features.
 
-Please refer to "Mathematical_Formulas_for_C_Functions.pdf" for a complete breakdown of each formula.
+Please refer to "Features.pdf" for a complete breakdown of each formula.
 
 Files Included
 --------------
