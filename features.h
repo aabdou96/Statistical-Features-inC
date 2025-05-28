@@ -1,12 +1,12 @@
 /*
  * features500.h
  *
- *  Created on: Jan. 17, 2022
- *      Author: aabdo
+ *  Created on: May 28, 2025
+ *      Author: aabdou96
  */
 
-#ifndef FEATURES500_H_
-#define FEATURES500_H_
+#ifndef FEATURES_H_
+#define FEATURES_H_
 
 int get_max(int array[]); //max
 int get_min(int array[]); //min
@@ -23,4 +23,4 @@ int get_rrsq(int array[]); // Root-sum-of-squares of the signal
 
 
 
-#endif /* FEATURES500_H_ */
+#endif /* FEATURES_H_ */
