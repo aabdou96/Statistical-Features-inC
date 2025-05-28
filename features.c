@@ -1,21 +1,20 @@
 /*
- * features500.c
+ * features.c
  *
- *  Created on: Jan. 14, 2022
- *      Author: aabdo
+ *  Created on: May 28, 2025
+ *      Author: aabdou96
  */
 
 
 #include<stdio.h>
 #include<math.h>
 
-#define SR 100
+#define SR 100 // Array Size (Can be changed to fit with your application)
 
-int accel_x[SR], accel_y[SR],accel_z[SR];
-int gyr_x[SR],gyr_y[SR],gyr_z[SR];
-float *p; //used for rms example in main : p = get_rms();
 
-int get_max(int array[]){
+float *p; // used for rms example in main : p = get_rms();
+
+int get_max(int array[]){ // Max value of array
 	int i, max, size;
 	size = SR;
 	max = array[0];
@@ -26,7 +25,7 @@ int get_max(int array[]){
 	}
 return max;}
 
-int get_min(int array[]){
+int get_min(int array[]){ // Min value of array
 	int i, min, size;
 	size = SR;
 	min = array[0];
@@ -37,7 +36,7 @@ int get_min(int array[]){
 	}
 return min;}
 
-float get_mean(int array[]){
+float get_mean(int array[]){ //Average of array
 		int i, size;
 		float y, sum = 0, mean;
 		size = SR;
@@ -48,7 +47,7 @@ float get_mean(int array[]){
 		return mean;
 }
 
-float get_std(float array[]){
+float get_std(float array[]){ // Standard deviation of the array
 	int i, size = SR;
 	float sum =0, mean= 0, std =0;
 	for(i =0;i<= size;++i){
@@ -62,7 +61,7 @@ float get_std(float array[]){
 	return std;
 }
 
-float get_skewness(float array[]){
+float get_skewness(float array[]){ // Skewness value of the array
 	int i, size;
 	float sum = 0;
 	size =SR;
@@ -76,7 +75,7 @@ float get_skewness(float array[]){
 						get_std(array));
 }
 
-float get_kurtosis(float array[]){
+float get_kurtosis(float array[]){ // Kurtosis value of the array
 	  int i, size =SR;
 	  float sum = 0;
 	  float mean = 0;
@@ -99,7 +98,7 @@ float get_kurtosis(float array[]){
 	  return k;
 }
 
-float *get_rms(int array1[], int array2[], int array3[]){
+float *get_rms(int array1[], int array2[], int array3[]){ //root-mean square of the array
 	int i=0, size;
 	size = SR;
 
@@ -117,7 +116,7 @@ float *get_rms(int array1[], int array2[], int array3[]){
 	return rms_array;
 }
 
-int get_ZC(int array[]){
+int get_ZC(int array[]){ // zero_crossing count of array
        int ZC_counter=0;
        int size= SR;
 
@@ -130,7 +129,7 @@ int get_ZC(int array[]){
        return ZC_counter;
    }
 
-int get_SE(int array[]){
+int get_SE(int array[]){ // Standard error value
 	int size= SR;
 	int SE = 0, i;
 	for(i=0;i<size;i++){
@@ -139,7 +138,7 @@ int get_SE(int array[]){
 	return SE;
 }
 
-int get_p2p(int array[]){
+int get_p2p(int array[]){ // peak to peak
 		int size = SR; int i;
 		int diff; int max; int min;
 
@@ -159,7 +158,7 @@ int get_p2p(int array[]){
 		return diff;
 }
 
-int get_pk2rms(int array[]){
+int get_pk2rms(int array[]){ // peak to root mean square value
 	int size = SR; int i =0;
 	int pk2rms; int abs_max;
 
@@ -180,7 +179,7 @@ int get_pk2rms(int array[]){
 	return pk2rms;
 }
 
-int get_rrsq(int array[]){
+int get_rrsq(int array[]){ // R-squared
 	int size = SR; int i =0;
 	int S = 0; int rssq;
 		for(i=0;i<size;i++){
