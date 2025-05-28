@@ -42,7 +42,7 @@ Please refer to "Mathematical_Formulas_for_C_Functions.pdf" for a complete break
 Files Included
 --------------
 - C and header files for the statistical features functions.
-- Mathematical_Formulas_for_C_Functions.pdf: PDF with formula definitions.
+- Features.pdf: PDF with formula definitions.
 - README.txt: Project description and usage guide (this file).
 
 Contributions
