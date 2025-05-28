@@ -131,7 +131,7 @@ int get_ZC(int array[]){ // zero_crossing count of array
        return ZC_counter;
    }
 
-int get_SE(int array[]){ // Standard error value
+int get_SE(int array[]){ // Signal Energy
 	int size= SR;
 	int SE = 0, i;
 	for(i=0;i<size;i++){
