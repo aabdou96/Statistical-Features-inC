@@ -181,7 +181,7 @@ int get_pk2rms(int array[]){ // peak to root mean square value
 	return pk2rms;
 }
 
-int get_rrsq(int array[]){ // R-squared
+int get_rrsq(int array[]){ // Root sum of squares
 	int size = SR; int i =0;
 	int S = 0; int rssq;
 		for(i=0;i<size;i++){
