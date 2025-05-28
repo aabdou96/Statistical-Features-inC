@@ -9,8 +9,10 @@
 #include<stdio.h>
 #include<math.h>
 
+
 #define SR 100 // Array Size (Can be changed to fit with your application)
 
+int arr1[SR], arr2[SR],arr3[SR]; // You can set any number of arrays you would like. 
 
 float *p; // used for rms example in main : p = get_rms();
 
@@ -98,7 +100,7 @@ float get_kurtosis(float array[]){ // Kurtosis value of the array
 	  return k;
 }
 
-float *get_rms(int array1[], int array2[], int array3[]){ //root-mean square of the array
+float *get_rms(int array1[], int array2[], int array3[]){ //root-mean square of 3 arrays combined.
 	int i=0, size;
 	size = SR;
 
